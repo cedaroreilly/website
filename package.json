@@ -1,0 +1,8 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "My Personal Website",
+  "repository": "https://github.com/cedaroreilly/website.git",
+  "author": "Aaron Panchal <aaron.panchal@appfolio.com>",
+  "private": true
+}
