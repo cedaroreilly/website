@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: './src/index.js',
@@ -6,5 +7,10 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-  mode: process.env.NODE_ENV
+  mode: process.env.NODE_ENV,
+  plugins: [
+    new CopyWebpackPlugin([
+      { from: 'src/favicons' }
+    ])
+  ]
 };
