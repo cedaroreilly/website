@@ -4,5 +4,14 @@
   "description": "My Personal Website",
   "repository": "https://github.com/cedaroreilly/website.git",
   "author": "Aaron Panchal <aaron.panchal@appfolio.com>",
-  "private": true
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server --history-api-fallback --hot",
+    "build": "NODE_ENV=production webpack -p"
+  },
+  "devDependencies": {
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.1"
+  }
 }
