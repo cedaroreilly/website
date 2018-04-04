@@ -6,7 +6,7 @@
   "author": "Aaron Panchal <aaron.panchal@appfolio.com>",
   "private": true,
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --history-api-fallback --hot",
+    "start": "NODE_ENV=development webpack-dev-server --history-api-fallback --hot --open",
     "build": "NODE_ENV=production webpack -p"
   },
   "devDependencies": {
