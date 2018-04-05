@@ -2,6 +2,8 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins/breakpoints";
 
+@import "~bootstrap/scss/utilities/spacing";
+
 html {
   color: #4a4a4a;
   font-family: 'futura-pt', sans-serif;
@@ -17,15 +19,15 @@ body {
   text-align: left;
 }
 
-main {
-  margin: 2rem 0;
-
-  @include media-breakpoint-up(md) {
-    margin: 3rem 0;
-  }
-}
-
 h1, h2, h3, h4, h5 {
   font-family: 'futura-pt-bold', sans-serif;
   margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
