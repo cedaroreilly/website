@@ -26,7 +26,10 @@ module.exports = {
     ]
   },
   plugins: [
-    new CopyWebpackPlugin([{ from: 'src/favicons' }]),
+    new CopyWebpackPlugin([
+      { from: 'src/favicons' },
+      { from: 'src/pages', to: 'pages' }
+    ]),
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
