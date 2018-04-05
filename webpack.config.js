@@ -1,6 +1,7 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
@@ -29,6 +30,7 @@ module.exports = {
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
+      inlineSource: '.(js|css)$',
       minify:
         process.env.NODE_ENV === 'production'
           ? {
@@ -37,6 +39,7 @@ module.exports = {
               removeComments: true
             }
           : false
-    })
+    }),
+    new HtmlWebpackInlineSourcePlugin()
   ]
 };

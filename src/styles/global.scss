@@ -1,0 +1,33 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+
+@import "~bootstrap/scss/utilities/spacing";
+
+html {
+  color: #4a4a4a;
+  font-family: 'futura-pt', sans-serif;
+  font-kerning: normal;
+  font-size: 19px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: #fff;
+  margin: 0;
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'futura-pt-bold', sans-serif;
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
