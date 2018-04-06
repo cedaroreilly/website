@@ -1,11 +1,12 @@
 .tile {
   font-weight: 300;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .tile-thumbnail {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 0.75rem auto;
   max-width: 270px;
   width: 100%;
 }
