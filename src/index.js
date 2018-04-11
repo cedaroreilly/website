@@ -10,6 +10,7 @@ function loadPath(path) {
       loadPath('/404');
     } else {
       pageElement.innerHTML = this.responseText;
+      window.scrollTo(0, 0);
       interceptLinksIn(pageElement);
     }
   });
