@@ -10,6 +10,7 @@ function loadPath(path) {
       loadPath('/404');
     } else {
       pageElement.innerHTML = this.responseText;
+      window.scrollTo(0, 0);
       interceptLinksIn(pageElement);
     }
   });
@@ -19,7 +20,7 @@ function loadPath(path) {
 }
 
 function interceptLinksIn(parent) {
-  parent.querySelectorAll('a[href]:not(.button)').forEach(function(link) {
+  parent.querySelectorAll('a[href]:not(.email)').forEach(function(link) {
     link.addEventListener(
       'click',
       function(e) {
