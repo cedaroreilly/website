@@ -19,20 +19,28 @@ function loadPath(path) {
 }
 
 function interceptLinksIn(parent) {
-  parent.querySelectorAll('a[href]').forEach(function(link) {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      if (this.getAttribute('href') !== window.location.pathname) {
-        loadPath(this.getAttribute('href'));
-        history.pushState(null, this.getAttribute('href'), this.getAttribute('href'));
-      }
-    }, false);
+  parent.querySelectorAll('a[href]:not(.button)').forEach(function(link) {
+    link.addEventListener(
+      'click',
+      function(e) {
+        e.preventDefault();
+        if (this.getAttribute('href') !== window.location.pathname) {
+          loadPath(this.getAttribute('href'));
+          history.pushState(
+            null,
+            this.getAttribute('href'),
+            this.getAttribute('href')
+          );
+        }
+      },
+      false
+    );
   });
 }
 
 window.onpopstate = function() {
   loadPath(window.location.pathname);
-}
+};
 
 loadPath(window.location.pathname);
 interceptLinksIn(document);
