@@ -1,6 +1,7 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const minify = require('html-minifier').minify;
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -28,7 +29,16 @@ module.exports = {
   plugins: [
     new CopyWebpackPlugin([
       { from: 'src/favicons' },
-      { from: 'src/pages', to: 'pages' },
+      {
+        from: 'src/pages',
+        to: 'pages',
+        transform(content) {
+          return minify(content.toString(), {
+            collapseWhitespace: true,
+            removeComments: true
+          });
+        }
+      },
       { from: 'images', to: 'images' }
     ]),
     new MiniCssExtractPlugin(),
