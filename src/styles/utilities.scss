@@ -1,3 +1,45 @@
 .text-center {
   text-align: center !important;
 }
+
+.mb-4, .my-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mt-4, .my-4 {
+  margin-top: 1.5rem !important;
+}
+
+.mb-5, .my-5 {
+    margin-bottom: 3rem !important;
+}
+
+@include media-breakpoint-up(md) {
+  .mb-md-5, .my-md-5 {
+    margin-bottom: 3rem!important;
+  }
+
+  .mt-md-5, .my-md-5 {
+    margin-top: 3rem!important;
+  }
+}
+
+.pl-3, .px-3 {
+  padding-left: 1rem !important;
+}
+
+.pt-3, .py-3 {
+  padding-top: 1rem !important;
+}
+
+.pb-4, .py-4 {
+  padding-bottom: 1.5rem !important;
+}
+
+.pb-5, .py-5 {
+  padding-bottom: 3rem !important;
+}
+
+.pt-5, .py-5 {
+  padding-top: 3rem !important;
+}
