@@ -20,7 +20,7 @@ function loadPath(path) {
 }
 
 function interceptLinksIn(parent) {
-  parent.querySelectorAll('a[href]:not(.email)').forEach(function(link) {
+  parent.querySelectorAll('a[href]:not(.external)').forEach(function(link) {
     link.addEventListener(
       'click',
       function(e) {
