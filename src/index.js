@@ -3,7 +3,7 @@ require('./app.scss');
 var pageElement = document.getElementById('page');
 
 function loadPath(path) {
-  var pageName = path === '/' ? '/index' : path;
+  var pageName = path === '/' ? '/index' : path.replace(/\/+$/, '');
   var xhr = new XMLHttpRequest();
   xhr.addEventListener('load', function() {
     if (this.status === 404) {
